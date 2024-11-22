@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "VT323-Regular";
+  src: url(/fonts/VT323-Regular.ttf);
+}
+@font-face {
+  font-family: "Cubic_11_1.010_R";
+  src: url(/fonts/Cubic_11_1.010_R.ttf);
+}
+@font-face {
+  font-family: "zpix";
+  src: url(/fonts/zpix.ttf);
+}
+:root {
+  --main-purple: #512893;
+  --main-darkpurple: #0d0733;
+  --main-brightpurple: #9b6cff;
+  --main-colorpurple: #7817f3;
+  --main-yellow: #f3d52e;
+  --main-orange: #ff9900;
+  --main-darkpink: #ff7269;
+  --main-brightpink: #ff93c7;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #b4b4b4;
+}
+
+body {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+body a:active {
+  color: inherit;
+  text-decoration: none;
+}
+body a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+body ul,
+body li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body button {
+  border: 0;
+  background: transparent;
+}
+body header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+body select {
+  background: transparent;
+  border: none;
+}
+body select:focus {
+  outline: none;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -999;
+}
+
+/* ------------- 拉把樣式 -------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-darkpurple);
+  /* border: 2px solid var(--main-purple); */
+  /* border-radius: 20px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-brightpurple);
+  border: 2px solid var(--main-darkpurple);
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.322);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-purple);
+}
+
+/* ------------------- */
+.l-book {
+  display: flex;
+  margin: 1rem 0 5rem 0;
+}
+
+.l-cart {
+  width: 90%;
+  display: flex;
+  margin: 1rem auto 5rem auto;
+}
+
+.l-user {
+  display: flex;
+  gap: 25px;
+  margin: 1rem auto 5rem auto;
+}
+.l-user > div:last-child {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .l-book {
+    display: block;
+    margin: 0;
+  }
+  .l-user {
+    flex-direction: column;
+  }
+}
+/* 商品加入購物車按鈕 */
+.price-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-family: "zpix";
+}
+.price-area > div {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 80%;
+  height: 30px;
+}
+.price-area button {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  color: var(--black);
+  cursor: pointer;
+}
+.price-area svg {
+  font-size: 24px;
+}
+
+.pixel-border-add {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  background-color: var(--main-yellow);
+  box-shadow: 0 0 0 1px var(--main-yellow), 0 5px 0 -1px var(--main-yellow), 4px 0 0 -1px var(--main-yellow), 0 0 0 1px var(--main-yellow), 0 -5px 0 -1px var(--main-yellow), -4px 0 0 -1px var(--main-yellow), 0 0 0 3px var(--black), 0 6px 0 0 var(--black), 0 -6px 0 0 var(--black), 5px 0 0 0 var(--black), -5px 0 0 0 var(--black);
+}
+
+.pixel-d-purple {
+  box-shadow: 3px 0 0 var(--main-darkpurple), -3px 0 0 var(--main-darkpurple), 0 -3px 0 var(--main-darkpurple), 0 3px 0 var(--main-darkpurple);
+}
+
+.pixel-purple {
+  box-shadow: 3px 0 0 var(--main-colorpurple), -3px 0 0 var(--main-colorpurple), 0 -3px 0 var(--main-colorpurple), 0 3px 0 var(--main-colorpurple);
+}
+
+.pixel-border-yellow {
+  box-shadow: 0 0 0 2px var(--main-yellow), 0 4px 0 #ffa81d, 4px 0 0 #ffa81d, 0 -4px 0 var(--main-yellow), -4px 0 0 var(--main-yellow), 4px 2px 0 var(--black), 4px -2px 0 var(--black), -4px 2px 0 var(--black), -4px -2px 0 var(--black), 2px 4px 0 var(--black), 2px -4px 0 var(--black), -2px 4px 0 var(--black), -2px -4px 0 var(--black), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 0 -6px 0 var(--black);
+}
+
+.pixel-border-white {
+  box-shadow: 4px 0 0 rgb(200, 200, 200), -4px 0 0 white, 0 -4px 0 white, 0 4px 0 rgb(200, 200, 200);
+}
+
+.pixel-border-black {
+  box-shadow: 3px 0 0 var(--black), -3px 0 0 var(--black), 0 -3px 0 var(--black), 0 3px 0 var(--black);
+}
+
+.pixel-border-purple {
+  box-shadow: 0 -3px 0 var(--main-brightpurple), -3px 0 0 var(--main-brightpurple), 0 3px 0 var(--main-colorpurple), 3px 0 0 var(--main-colorpurple), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 0 -6px 0 var(--black), 0 0 0 3px var(--black);
+  box-shadow: 0 -3px 0 var(--main-colorpurple), -3px 0 0 var(--main-colorpurple), 0 3px 0 var(--main-purple), 3px 0 0 var(--main-purple), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 0 -6px 0 var(--black), 0 0 0 3px var(--black);
+}
+
+.pixel-border-orange {
+  box-shadow: 0 -3px 0 var(--main-orange), -3px 0 0 var(--main-orange), 0 3px 0 #ce5900, 3px 0 0 #ce5900, 6px 0 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 0 -6px 0 var(--black), 0 0 0 3px var(--black);
+}
+
+.pixel-border-white {
+  box-shadow: 2px 0 0 rgb(200, 200, 200), -2px 0 0 white, 0 -2px 0 white, 0 2px 0 rgb(200, 200, 200);
+}
+
+.bg-purple {
+  background-color: var(--main-purple);
+}
+
+.bg-bright-purple {
+  background-color: var(--main-brightpurple);
+}
+
+.bg-color-purple {
+  background-color: var(--main-colorpurple);
+}
+
+.bg-dark-purple {
+  background-color: var(--main-darkpurple);
+}
+
+.bg-orange {
+  background-color: var(--main-orange);
+}
+
+.bg-yellow {
+  background-color: var(--main-yellow);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.chat_screen_bg {
+  background-color: var(--main-darkpurple);
+  background: linear-gradient(135deg, transparent 5px, var(--main-darkpurple) 0) top left, linear-gradient(-135deg, transparent 5px, var(--main-darkpurple) 0) top right, linear-gradient(-45deg, transparent 5px, var(--main-darkpurple) 0) bottom right, linear-gradient(45deg, transparent 5px, var(--main-darkpurple) 0) bottom left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  filter: drop-shadow(2px 2px 0 var(--main-colorpurple)) drop-shadow(-2px -2px 0 var(--main-colorpurple)) drop-shadow(2px -2px 0 var(--main-colorpurple)) drop-shadow(-2px 2px 0 var(--main-colorpurple));
+  animation: breathe 2s ease-in infinite;
+}
+
+.chat_inputbox_bg {
+  background: linear-gradient(135deg, transparent 5px, var(--main-brightpurple) 0) top left, linear-gradient(-135deg, transparent 5px, var(--main-brightpurple) 0) top right, linear-gradient(-45deg, transparent 5px, var(--main-brightpurple) 0) bottom right, linear-gradient(45deg, transparent 5px, var(--main-brightpurple) 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(4px 4px 0 #bc9dff);
+}
+
+/* 隱藏slider 上一頁和下一頁按鈕 */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.padding {
+  padding: 5rem;
+}
+
+.socket-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--main-brightpurple);
+}
+.socket-layout .socket-col {
+  display: flex;
+  justify-content: flex-start; /* 預設靠左 */
+  padding: 10px;
+  border-radius: 10px;
+}
+.socket-layout .socket-col.socket-right {
+  justify-content: flex-end; /* 靠右 */
+}/*# sourceMappingURL=globals.css.map */

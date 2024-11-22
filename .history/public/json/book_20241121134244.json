@@ -1,0 +1,42 @@
+[
+    {
+        "b_id": 1,
+        "b_title": "The Great Gatsby",
+        "b_price": 350,
+        "b_img": "lover.png",
+        "b_genre": "文學小說",
+        "b_sales": 100
+    },
+    {
+        "b_id": 2,
+        "b_title": "Business Secrets",
+        "b_price": 400,
+        "b_img": "lover.png",
+        "b_genre": "商業理財",
+        "b_sales": 50
+    },
+    {
+        "b_id": 3,
+        "b_title": "Social Science 101",
+        "b_price": 200,
+        "b_img": "lover.png",
+        "b_genre": "藝術設計",
+        "b_sales": 500
+    },
+    {
+        "b_id": 4,
+        "b_title": "Mind Over Matter",
+        "b_price": 200,
+        "b_img": "lover.png",
+        "b_genre": "心理勵志",
+        "b_sales": 50
+    },
+    {
+        "b_id": 5,
+        "b_title": "Learn a New Language",
+        "b_price": 200,
+        "b_img": "lover.png",
+        "b_genre": "人文社科",
+        "b_sales": 50
+    }
+]

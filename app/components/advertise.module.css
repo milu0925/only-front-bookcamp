@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* 廣告區塊 */
+.l_advertise {
+  padding-block: 20px;
+  display: flex;
+  justify-content: center;
+}
+.l_advertise .col_advertise {
+  position: relative;
+  z-index: -5;
+  overflow: hidden;
+  border: 10px solid var(--main-purple);
+  max-height: 300px;
+}
+.l_advertise .col_advertise::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 40px;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, transparent 20px, var(--main-purple) 0);
+  filter: drop-shadow(0 -5px 0 var(--main-darkpurple)) drop-shadow(-5px 0 0 var(--main-darkpurple));
+}
+.l_advertise .col_advertise::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-45deg, transparent 20px, var(--main-purple) 0);
+  filter: drop-shadow(0 5px 0 var(--main-darkpurple)) drop-shadow(5px 0 0 var(--main-darkpurple));
+}
+.l_advertise .col_advertise img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.col_advertise_bright::before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  border-top: 10px dashed var(--white);
+  width: 50px;
+  z-index: 60;
+  animation: breathing 2s steps(2) infinite;
+  animation-delay: 1s;
+}
+.col_advertise_bright::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  border-top: 10px dashed var(--main-yellow);
+  width: 50px;
+  z-index: 60;
+  animation: breathing 2s steps(2) infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* 廣告區塊 - 動畫箭頭*/
+.advertise_arrow {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(180deg, var(--black) 0%, var(--black) 45%, #161616 45%, #161616 90%, var(--black) 90%, var(--black) 100%);
+  background-size: 25% 100%;
+  opacity: 1;
+  width: 120px;
+  margin: 16px;
+  border: 5px dashed var(--main-orange);
+  box-shadow: 0 -3px 0 var(--main-brightpurple), -3px 0 0 var(--main-brightpurple), 0 3px 0 var(--main-purple), 3px 0 0 var(--main-purple), 0 -6px 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 6px 0 0 var(--black), 0 0 0 3px var(--black);
+  overflow: hidden;
+  animation: slideUpDown 3s steps(10) infinite;
+  transition: 0.3s;
+}
+.advertise_arrow:hover {
+  border: 5px dashed var(--white);
+  scale: 1.01;
+}
+.advertise_arrow:hover span {
+  animation: move-right 0.5s steps(10) infinite;
+}
+.advertise_arrow:hover span:nth-child(2) {
+  animation-delay: -0.25s;
+}
+.advertise_arrow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #5129b6;
+  z-index: 1;
+}
+.advertise_arrow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #5129b6;
+  z-index: 1;
+}
+.advertise_arrow div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.advertise_arrow span {
+  width: 50%;
+  height: 100%;
+  max-height: 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url("/images/icon-pixel/goahea.svg");
+  animation: move-right 3s steps(30) infinite;
+}
+.advertise_arrow span:nth-child(2) {
+  animation-delay: -1s;
+}
+.advertise_arrow span:nth-child(3) {
+  animation-delay: -2s;
+}
+
+.advertise_arrow_rotate {
+  transform: rotate(180deg);
+}
+
+@keyframes slideUpDown {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -40vw;
+  }
+}
+@keyframes move-right {
+  0% {
+    transform: translateX(-130%); /* 初始位置，不位移 */
+  }
+  100% {
+    transform: translateX(150%); /* 向右位移100%宽度 */
+  }
+}
+@media screen and (max-width: 768px) {
+  .l_advertise {
+    padding-block: 10px;
+    padding-inline: 1rem;
+  }
+  .l_advertise .col_advertise {
+    border: 5px solid var(--main-purple);
+  }
+  .l_advertise .col_advertise::before {
+    width: 100px;
+    height: 20px;
+    filter: drop-shadow(0 -2px 0 var(--main-darkpurple)) drop-shadow(-2px 0 0 var(--main-darkpurple));
+  }
+  .l_advertise .col_advertise::after {
+    width: 100px;
+    height: 20px;
+    filter: drop-shadow(0 2px 0 var(--main-darkpurple)) drop-shadow(2px 0 0 var(--main-darkpurple));
+  }
+  .col_advertise_bright::before {
+    bottom: 2%;
+    right: 1%;
+    border-top: 4px dashed var(--white);
+    width: 20px;
+  }
+  .col_advertise_bright::after {
+    top: 2%;
+    left: 1%;
+    border-top: 4px dashed var(--main-yellow);
+    width: 20px;
+  }
+  .advertise_arrow {
+    display: none;
+  }
+}/*# sourceMappingURL=advertise.module.css.map */

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--main-darkpurple);
+  color: var(--black);
+}
+.header .logo {
+  max-width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header_btn_group {
+  display: flex;
+  align-items: center;
+}
+.header .header_btn_group .header_btn_cart {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 30px;
+  transition: 0.3s;
+}
+.header .header_btn_group .header_btn_cart svg {
+  width: 50%;
+  height: 50%;
+  color: var(--black);
+}
+.header .header_btn_group .header_btn_cart .header_btn_cart_count {
+  position: absolute;
+  background-color: rgb(220, 53, 69);
+  border-radius: 50px;
+  padding: 0.35rem 0.65rem;
+  right: -18px;
+  top: -18px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--white);
+}
+.header .header_btn_group .header_btn_cart:hover {
+  scale: 0.94;
+}
+.header .header_btn_group .header_btn_cart:hover svg {
+  transform: scale(1.24);
+}
+.header .header_btn_group .header_btn_login {
+  min-width: 60px;
+  max-width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.6s ease;
+}
+
+.member {
+  position: relative;
+}
+
+.member_center {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  border-top: 12px solid transparent; /* 添加透明邊框 */
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.member_center a,
+.member_center button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding-block: 0.5rem;
+  margin-bottom: 0.8rem;
+  background-color: var(--main-yellow);
+  box-shadow: 0 0 0 1px var(--main-yellow), 0 5px 0 -1px var(--main-yellow), 4px 0 0 -1px var(--main-yellow), 0 0 0 1px var(--main-yellow), 0 -5px 0 -1px var(--main-yellow), -4px 0 0 -1px var(--main-yellow), 0 0 0 3px var(--black), 0 6px 0 0 var(--black), 0 -6px 0 0 var(--black), 5px 0 0 0 var(--black), -5px 0 0 0 var(--black);
+  animation: button-shimmer 2s infinite;
+  transition: all 0.3s ease-in-out;
+}
+.member_center a:hover,
+.member_center button:hover {
+  background: var(--main-orange);
+  box-shadow: 0 0 0 2px var(--main-orange), 0 4px 0 #ff6a00, 4px 0 0 #ff6a00, 0 -4px 0 var(--main-orange), -4px 0 0 var(--main-orange), 4px 2px 0 var(--black), 4px -2px 0 var(--black), -4px 2px 0 var(--black), -4px -2px 0 var(--black), 2px 4px 0 var(--black), 2px -4px 0 var(--black), -2px 4px 0 var(--black), -2px -4px 0 var(--black), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 6px 0 var(--black), 0 -6px 0 var(--black);
+  animation: button-particles 1s ease-in-out infinite;
+  transform: translateY(-2px);
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes button-shimmer {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}
+@keyframes button-particles {
+  0% {
+    background-position: left top;
+  }
+  100% {
+    background-position: right bottom;
+  }
+}/*# sourceMappingURL=header.module.css.map */

@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cookies": "^0.9.1",
+    "fs": "^0.0.1-security",
+    "next": "15.0.3",
+    "path": "^0.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-slick": "^0.30.2",
+    "react-swiper": "^0.1.5",
+    "sass": "^1.81.0",
+    "slick-carousel": "^1.8.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "sweetalert2": "^11.14.5",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3"
+  }
+}

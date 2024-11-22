@@ -1,0 +1,98 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-darkpurple);
+}
+
+.footer_top .footer_top_list {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer_top .footer_top_list .footer_logo {
+  width: 300px;
+  padding-top: 2rem;
+}
+.footer_top .footer_top_list .footer_logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer_top .footer_top_list .footer_logo .footerDonate {
+  color: rgba(255, 255, 255, 0.297);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 20px;
+}
+.footer_top .footer_top_list .footer_text {
+  display: flex;
+}
+.footer_top .footer_top_list .footer_text ul {
+  width: 100px;
+}
+.footer_top .footer_top_list .footer_text ul li {
+  line-height: 2;
+  font-size: 14px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_top .footer_top_list .footer_text ul li:not(:first-child):hover {
+  background-color: var(--main-colorpurple);
+  border-radius: 5px;
+}
+.footer_top .footer_top_list .footer_text ul li a {
+  color: var(--white);
+}
+.footer_top .footer_top_list .footer_text ul li:first-child {
+  font-size: 22px;
+  display: flex;
+  color: rgb(172, 39, 165);
+  text-shadow: 1px 1px 0 #f1f1f1;
+}
+
+.footer_copyright {
+  width: 100%;
+}
+.footer_copyright div {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.footer_copyright div svg {
+  padding-inline: 5px;
+}
+
+.statement {
+  color: white;
+  background-color: rgba(81, 40, 147, 0.3882352941);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-block: 1.5rem;
+}
+.statement li {
+  margin-block: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_top .footer_top_list {
+    flex-direction: column;
+  }
+  .footer_top .footer_top_list .footer_text {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer_top .footer_top_list .footer_text ul {
+    width: 180px;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

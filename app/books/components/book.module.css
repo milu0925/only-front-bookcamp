@@ -1,0 +1,242 @@
+@charset "UTF-8";
+.l_sort_book {
+  width: 180px;
+  max-height: 700px;
+  color: white;
+  margin: 3rem 0 0 1rem;
+  background-color: #ac332a;
+  box-shadow: 3px 0 0 #ac332a, 0 3px 0 #ac332a, 0 -3px 0 #ac332a, -3px 0 0 #ac332a, 0 -6px 0 var(--black), 0 6px 0 var(--black), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 0 0 3px var(--black);
+  overflow: hidden;
+}
+.l_sort_book .r_sort_book_title {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 1rem;
+  font-size: 20px;
+  font-family: "zpix";
+  background-color: var(--main-darkpink);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: inset 0 -3px 0 #ffa19b, 0 -3px 0 var(--main-darkpink), -3px 0 0 var(--main-darkpink), 3px 0 0 var(--main-darkpink);
+}
+.l_sort_book .r_sort_book_title svg {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+.l_sort_book .r_sort_book_content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-darkpurple);
+  overflow: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.l_sort_book .r_sort_book_content .r_sort_book_btn {
+  width: 90%;
+  text-align: center;
+  font-weight: bolder;
+  padding-block: 10px;
+  margin-block: 10px;
+  margin-inline: auto;
+  cursor: pointer;
+  border-width: 0 0 1px 0;
+  border-style: dashed;
+}
+.l_sort_book .r_sort_book_content .r_sort_book_btn.active_btn {
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow);
+  box-shadow: 3px 0 0 var(--main-orange), -3px 0 0 var(--main-yellow), 0 -3px 0 var(--main-yellow), 0 3px 0 var(--main-orange);
+}
+.l_sort_book .r_sort_book_content .r_sort_book_btn.active_btn a {
+  color: var(--black);
+}
+.l_sort_book .r_sort_book_content .r_sort_book_btn:last-child {
+  border: none;
+}
+.l_sort_book .r_sort_book_content .r_sort_book_btn a {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .l_sort_book {
+    width: calc(100% - 12px);
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 3px 0 5px var(--main-purple), 0 3px 5px var(--main-purple), 0 -3px 5px var(--main-purple), -3px 0 5px var(--main-purple), 0 -6px 0 var(--black), 0 6px 0 var(--black), 6px 0 0 var(--black), -6px 0 0 var(--black), 0 0 0 3px var(--black);
+  }
+  .l_sort_book .r_sort_book_title {
+    padding: 6px;
+    font-size: 16px;
+    font-family: "zpix";
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: none;
+  }
+  .l_sort_book .r_sort_book_title svg {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+  }
+  .l_sort_book .r_sort_book_content {
+    white-space: nowrap;
+    font-size: 20px;
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin-right: 1rem;
+  }
+  .l_sort_book .r_sort_book_content::-webkit-scrollbar {
+    display: none; /* 隱藏 Chrome 和 Safari 中的滾動條 */
+  }
+  .l_sort_book .r_sort_book_content ul {
+    overflow-y: scroll; /* 垂直滾動條 */
+    overflow-x: auto; /* 水平可以滾動，但隱藏滾動條 */
+    scrollbar-width: none; /* 隱藏 Firefox 中的滾動條 */
+    display: flex;
+    margin: 5px 20px;
+  }
+  .l_sort_book .r_sort_book_content li {
+    padding-inline: 1rem;
+  }
+  .l_sort_book .r_sort_book_content .r_sort_book_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 200px;
+    border: none;
+  }
+}
+.l_all_book {
+  width: 70vw;
+  margin: 3rem auto 0 auto;
+}
+.l_all_book .r_function {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+.l_all_book .r_function > div > span {
+  padding-right: 1rem;
+}
+.l_all_book .r_function button {
+  color: white;
+  cursor: pointer;
+  background-color: var(--main-brightpurple);
+  box-shadow: 3px 0 0 #b593ff, -3px 0 0 #b593ff, 0 -3px 0 #b593ff, 0 3px 0 #b593ff;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  transition: 0.4s;
+}
+.l_all_book .r_function button:hover {
+  background-color: var(--main-colorpurple);
+}
+.l_all_book .r_function select {
+  width: auto;
+  background-color: var(--main-darkpurple);
+  color: white;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+.l_all_book .r_books {
+  width: calc(100% + 4rem);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.l_all_book .r_books > div {
+  width: 130px;
+  padding: 2rem 2rem 1rem 0;
+}
+.l_all_book .r_books .r_book {
+  width: 125px;
+  padding: 0 0.8rem 0.5rem 0.8rem;
+  transition: all 0.25s ease-in;
+  overflow: hidden;
+}
+.l_all_book .r_books .r_book .r_book_title {
+  font-family: "zpix";
+  font-size: 18px;
+  height: 30px;
+  padding-block: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+.l_all_book .r_books .r_book img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.l_all_book .r_books .r_book:hover {
+  background-color: #17151c;
+  box-shadow: 4px 0 0 #222, -4px 0 0 #333, 0 -4px 0 #333, 0 4px 0 #222;
+  color: white;
+  z-index: 3;
+  transform: scale(1.07);
+}
+.l_all_book .r_books .r_book:hover .r_book_title {
+  animation: slideOut 10s linear infinite;
+  overflow: hidden;
+}
+.l_all_book .r_book_pagination {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .l_all_book {
+    width: 100%;
+    margin: 0;
+  }
+  .l_all_book .r_function {
+    flex-wrap: wrap;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .l_all_book .r_function > div {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 250px;
+    padding-inline: 1.2rem;
+  }
+  .l_all_book .r_function > div:nth-child(2) span {
+    padding-right: 2rem;
+  }
+  .l_all_book .r_books {
+    width: 100%;
+  }
+  .l_all_book .r_books > div {
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .l_all_book .r_books .r_book {
+    width: 100%;
+  }
+}
+@keyframes slideOut {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  49.99% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}/*# sourceMappingURL=book.module.css.map */

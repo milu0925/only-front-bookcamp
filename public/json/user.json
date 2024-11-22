@@ -1,0 +1,13 @@
+[
+    {
+        "u_id": 1,
+        "u_name": "王曉明",
+        "email": "ff@gmail.com",
+        "password": "123456",
+        "u_gender": "男",
+        "u_birthday": "1991-01-01",
+        "u_phone": "0988777888",
+        "u_img": "/images/user/20241105063424.svg",
+        "point": 199
+    }
+]
