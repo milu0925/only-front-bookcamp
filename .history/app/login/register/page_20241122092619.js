@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import style from "../login.module.scss";
+import style from "../login/login.module.scss";
 import { FaUserPlus } from "react-icons/fa6";
 import { FaIdCard } from "react-icons/fa";
 import { TbGenderDemiboy, TbGenderDemigirl } from "react-icons/tb";

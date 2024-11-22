@@ -1,8 +1,8 @@
-import Aside from "./components/Aside";
+import UserAside from "./components/Aside";
 export default function UserLayout({ children }) {
   return (
     <div className="l-user">
-      <Aside />
+      <UserAside />
       {children}
     </div>
   );

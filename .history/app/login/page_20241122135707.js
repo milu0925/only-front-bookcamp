@@ -43,7 +43,7 @@ export default function UserLogin() {
             disabled
             autoComplete="current-password"
           />
-          <Link href="/login/fpassword" className="font-sm ms-3">
+          <Link href="/login/fassword" className="font-sm ms-3">
             忘記密碼？
           </Link>
         </div>

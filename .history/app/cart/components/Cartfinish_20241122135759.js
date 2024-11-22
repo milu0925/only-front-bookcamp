@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./cart.module.scss";
 import CartFinishTotal from "./Cart-finish-total";
-import CartButton from "./Cart-button";
+import CartButton from "./Cartbutton";
 import CartFinishItem from "./Cart-finish-item";
 import { useRouter } from "next/navigation";
 import { read_one_order } from "@/hooks/call-api";
