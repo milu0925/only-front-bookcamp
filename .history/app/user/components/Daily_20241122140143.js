@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./user.module.scss";
 import { FaRegCalendarCheck } from "react-icons/fa6";
 import { FaRegQuestionCircle } from "react-icons/fa";
