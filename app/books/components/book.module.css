@@ -60,7 +60,7 @@
 .l_sort_book .r_sort_book_content .r_sort_book_btn:last-child {
   border: none;
 }
-.l_sort_book .r_sort_book_content .r_sort_book_btn a {
+.l_sort_book .r_sort_book_content .r_sort_book_btn div {
   color: var(--white);
   display: flex;
   justify-content: center;
