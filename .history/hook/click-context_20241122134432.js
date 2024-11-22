@@ -263,7 +263,6 @@ export const CartContext = ({ children }) => {
       (item) => item.b_title.includes(text) || item.b_genre.includes(text)
     );
     setbooks(results);
-    setClick("");
   };
 
   return (

@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import { useClick } from "@/hook/click-context";
 
 const Navbar = () => {
-  const { setClick, handleSearch } = useClick();
+  const { setClick } = useClick();
   //開啟下拉選單
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = (linkName) => {
@@ -36,7 +36,6 @@ const Navbar = () => {
   ];
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && searchValue.trim()) {
-      handleSearch(e);
     }
   };
   return (
